@@ -23,6 +23,8 @@ $ uiua run
 ```
 After executing `uiua run`, the image will be placed in the `renders` folder.
 
+You may want to change a few of the helpfully-labeled settings in main.ua prior to running Uabble.
+
 ## Examples
 See the `examples` directory for some sample outputs from this program. Unfortunately, I did not save
 what parameters were used to create them. Mistakes were made.

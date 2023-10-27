@@ -1,0 +1,1 @@
+PowerSequence ← ≐ⁿ⊃(+1⇡⋅∘)(;∶)

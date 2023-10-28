@@ -1,9 +1,14 @@
 Isos ← &i "isos.ua"
-HRI ← Isos "HRI"
-HIR ← Isos "HIR"
+  HRI ← Isos "HRI"
+  HIR ← Isos "HIR"
 
-# Convert to color space via lerp between min/max
-ColorMap ← ∺(×⊃(⊙;⊢⇌)(-⊢))⊂⊙(÷∶1-).⊃(/↧)(/↥)♭.
+Settings ← &i "config.ua"
+  RFn ← Settings "RedFn"
+  GFn ← Settings "GreenFn"
+  BFn ← Settings "BlueFn"
+
+SnapshotTools ← &i "snapshot.ua"
+  TakeSnapshot ← SnapshotTools "TakeSnapshot"
 
 # Add color to a single pixel based on its value
 # using individual R,G,B functions
@@ -11,4 +16,4 @@ ColorMap ← ∺(×⊃(⊙;⊢⇌)(-⊢))⊂⊙(÷∶1-).⊃(/↧)(/↥)♭.
 # R -> R.
 CPar!!! ← ⊂↥0↧1HRI^1HIR∶⊂⊃(↥0↧1HRI^1HIR)(↥0↧1HRI^1HIR).
 
-Colorize!!! ← ∵CPar!!!(^1)(^1)(^1)
+ColorizeStage ← |1 TakeSnapshot &pf "Finished colorize\n" ∵CPar!!!(RFn)(GFn)(BFn)

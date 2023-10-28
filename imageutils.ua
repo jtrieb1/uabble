@@ -1,5 +1,5 @@
 GUtils ← &i "genericutils.ua"
-IgnoreSmall ← GUtils "IgnoreSmall"
+  IgnoreSmall ← GUtils "IgnoreSmall"
 
 # Convert simple grayscale to RGB grayscale
 GSU ← ∵(⊂⊂..)
